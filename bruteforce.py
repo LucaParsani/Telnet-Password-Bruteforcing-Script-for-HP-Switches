@@ -19,8 +19,6 @@ if os.path.isfile(wordlistPath):
 	for i in range(3):
 		connection.recvline()
 	for word in wordSet:
-		if (word == "-----END WORDLIST----"): 	# add this at the end of the wordlist
-			break
 		connection.send(b'enable\x0D')
 		connection.send(b'manager\x0D')
 		print ('trying ' + PENDING + word + ENDC)
